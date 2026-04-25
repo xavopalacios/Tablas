@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="multiplicar.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+
+</head>
+<body>
+    <h1 id="txtTitle"> Tabla del 3 - Académico </h1>
+    <div class="input-group">
+    <label for="math-input" class="input-label">Ingresa un número para calcular</label>
+    <input 
+        type="number" 
+        id="math-input" 
+        class="modern-input" 
+        placeholder="Ej: 5"
+        min="0"
+        max="100">
+</div>
+
+
+    <header class="header">
+        <button class="btn-probar" onclick="generarTablas()">PROBAR</button>
+    </header>
+
+    <main class="main-content">
+        <section class="card">
+            <h1 class="title">Tabla de Multiplicar</h1>
+            <p class="subtitle" id="txtMultiplicador">Multiplicador base: <strong>3</strong></p>
+            
+            <div  class="table-container">
+                <table id="table-container" class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>Operación</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>3 × 1</td><td class="res" >3</td></tr>
+                        <tr><td>3 × 2</td><td class="res" >6</td></tr>
+                        <tr><td>3 × 3</td><td class="res" >9</td></tr>
+                        <tr><td>3 × 4</td><td class="res" >12</td></tr>
+                        <tr><td>3 × 5</td><td class="res" >15</td></tr>
+                        <tr><td>3 × 6</td><td class="res" >18</td></tr>
+                        <tr><td>3 × 7</td><td class="res" >21</td></tr>
+                        <tr><td>3 × 8</td><td class="res" >24</td></tr>
+                        <tr><td>3 × 9</td><td class="res" >27</td></tr>
+                        <tr><td>3 × 10</td><td class="res" >30</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Plataforma Educativa. Todos los derechos reservados.</p>
+        <p class="legal">Contenido con fines didácticos • Versión 1.0</p>
+    </footer>
+
+    <!-- Al final del body -->
+    <script src="multiplicar.js"></script>
+</body>
+
+</html>
+

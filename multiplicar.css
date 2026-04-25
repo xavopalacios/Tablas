@@ -1,0 +1,187 @@
+:root {
+    --primary: #4f46e5;
+    --secondary: #7c3aed;
+    --text-dark: #1f2937;
+    --bg-light: #f9fafb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header y Botón */
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.btn-probar {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-probar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.4);
+}
+
+/* Tarjeta Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    animation: slideUp 0.6s ease-out;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+/* Tabla */
+.table-container {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table th {
+    background-color: #f3f4f6;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.modern-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.res {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.modern-table tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 50px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin: 5px 0;
+}
+
+.legal {
+    font-size: 0.75rem !important;
+}
+
+/* Animaciones */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card { padding: 20px; }
+    .title { font-size: 1.5rem; }
+}
+/* Contenedor del campo */
+.input-group {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Etiqueta formal */
+.input-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-left: 4px;
+}
+
+/* Cuadro de texto moderno */
+.modern-input {
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #1f2937;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Animación y estilo al hacer clic (Focus) */
+.modern-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Estilo del placeholder */
+.modern-input::placeholder {
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
